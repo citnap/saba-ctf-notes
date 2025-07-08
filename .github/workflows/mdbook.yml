@@ -44,8 +44,8 @@ jobs:
         run: |
           for path in $(find src -maxdepth 1 -mindepth 1 -type d); do
             DIR_NAME=$(basename "$path")
-            mkdir -p writeups/$DIR_NAME
-            mdbook build $path -d writeups/$DIR_NAME
+            mkdir -p ./writeups/$DIR_NAME
+            mdbook build ./$path -d ./writeups/$DIR_NAME
           done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
