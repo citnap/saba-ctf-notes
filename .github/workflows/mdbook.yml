@@ -46,12 +46,12 @@ jobs:
           for path in $(find src -maxdepth 1 -mindepth 1 -type d); do
             DIR_NAME=$(basename "$path")
             mkdir -p ./writeups/$DIR_NAME
-            mdbook build ./$path -d ./writeups/$DIR_NAME
+            mdbook build ./$path -d ../../writeups/$DIR_NAME
           done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./writeups/ctf3
+          path: ./writeups
 
   # Deployment job
   deploy:
