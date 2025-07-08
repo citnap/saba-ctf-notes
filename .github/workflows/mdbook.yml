@@ -43,7 +43,7 @@ jobs:
       - name: Build with mdBook
         run: |
           for path in $(find src -maxdepth 1 -mindepth 1 -type d); do
-            DIR_NAME=$(cut -c 5- <<< $path)
+            DIR_NAME=$(basename "$path")
             mkdir -p writeups/$DIR_NAME
             mdbook build $path -d writeups/$DIR_NAME
           done
