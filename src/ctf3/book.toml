@@ -6,4 +6,4 @@ src = "src"
 title = "Uni CTF Writeup"
 
 [output.html]
-site-url = "/saba-ctf-notes/ctf3"
+site-url = "/saba-ctf-notes/"
